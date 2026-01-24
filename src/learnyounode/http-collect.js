@@ -1,14 +1,14 @@
 // TODO: Replace this with your solution.
 
-var http = require('http')
-var bl = require('bl')
+const http = require('http')
+const bl = require('bl')
 
 http.get(process.argv[2], function (res) {
-    res.pipe(bl(function(err, data) {
-        if (err) {
-            return console.error(err)
-        }
-        console.log(data.toString().length)
-        console.log(data.toString())
-    }))
+  res.pipe(bl(function (err, data) {
+    if (err) {
+      return console.error(err)
+    }
+    console.log(data.toString().length)
+    console.log(data.toString())
+  }))
 })
